@@ -1,0 +1,184 @@
+package org.lyh.validator;
+
+import org.lyh.validator.BaseEntity;
+
+import java.sql.Timestamp;
+
+/**
+ * Created by lvyahui on 2015-06-26.
+ */
+
+public class UserEntity extends BaseEntity {
+    private int id;
+    private String username;
+    private String password;
+    private String salt;
+    private String name;
+    private Integer gold;
+    private Integer progress;
+    private Timestamp createdAt;
+    private Timestamp updatedAt;
+    private String email;
+    private String phone;
+    private String code;
+
+    // 特殊表单数据
+    private String rePassword;
+
+
+    public String getRePassword() {
+        return rePassword;
+    }
+
+    public void setRePassword(String rePassword) {
+        this.rePassword = rePassword;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getGold() {
+        return gold;
+    }
+
+    public void setGold(Integer gold) {
+        this.gold = gold;
+    }
+
+
+    public Integer getProgress() {
+        return progress;
+    }
+
+    public void setProgress(Integer progress) {
+        this.progress = progress;
+    }
+
+    public Timestamp getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Timestamp createdAt) {
+        this.createdAt = createdAt;
+    }
+
+
+    public Timestamp getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Timestamp updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "org.lyh.validator.UserEntity{\n" +
+            "    id=" + id + ",\n" +
+            "    username='" + username + "\',\n" +
+            "    password='" + password + "\',\n" +
+            "    salt='" + salt + "\',\n" +
+            "    name='" + name + "\',\n" +
+            "    gold=" + gold + ",\n" +
+            "    progress=" + progress + ",\n" +
+            "    createdAt=" + createdAt + ",\n" +
+            "    updatedAt=" + updatedAt + ",\n" +
+            "    email='" + email + "\',\n" +
+            "    phone='" + phone + "\',\n" +
+            "    code='" + code + "\',\n" +
+            '}' + "\n";
+    }
+
+    @Override
+    public String[][] rules() {
+        return new String [][] {
+            {"username,password,email,gold,progress,phone","required"},
+            {"username,password","length","6","14"},
+            {"rePassword","equals","password"},
+            {"gold,progress","integer"},
+            {"email","regex","\\w{6,12}"},
+            {"phone","number"},
+            {"createAt","timestamp"}
+        };
+    }
+
+    @Override
+    public void initLabels() {
+        labels.put("username","用户名");
+        labels.put("password","用户名");
+        labels.put("email","邮箱");
+        labels.put("progress","进度");
+        labels.put("phone","电话");
+        labels.put("gold","金币");
+    }
+
+}

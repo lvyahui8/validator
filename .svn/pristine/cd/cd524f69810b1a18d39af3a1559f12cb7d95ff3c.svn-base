@@ -1,0 +1,18 @@
+package org.lyh.validator;
+
+/**
+ * Created by lvyahui on 2015-06-28.
+ */
+public enum Messages {
+    required("{0}不能为空"),
+    email("{0}不是合法的邮件地址");
+
+    private String msg;
+    private Messages(String msg){
+        this.msg = msg;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+}
