@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<validator>
+    <rules>
+        <rule name="required">
+            <attributes>username,password,email</attributes>
+        </rule>
+        <rule name="length">
+
+        </rule>
+    </rules>
+    <messages>
+        <message name="required" value="{0}必须填写" />
+    </messages>
+    <attributes>
+        <attribute name="username" value="用户名"/>
+        <attribute name="password" value="密码"/>
+        <attribute name="email" value="邮箱"/>
+    </attributes>
+</validator>

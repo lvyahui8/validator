@@ -39,16 +39,33 @@ public class BaseEntity {
         return labelMap.get(prop);
     }
 
+    /**
+     * 进行校验
+     * @return 校验
+     */
     public boolean validate() {
         return this.validator.validate();
     }
 
+    /**
+     * 如果校验失败通过他获取错误信息
+     * @return 错误信息
+     */
     public Map<String,Map<String,String>> getErrors(){
         return this.validator.getErrors();
     }
 
+    /**
+     * 校验规则
+     * @return 校验规则
+     */
+
     public String[][] labels(){return null;}
 
+    /**
+     * 字段翻译
+     * @return 字段翻译
+     */
     public String [][] rules(){return null;}
 
 }
