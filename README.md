@@ -2,6 +2,17 @@
 Background check plug-in
 Flexible back office verification plugin
 
+### Support
+
+* required 
+* length : Parameters include 'min' and 'max'(nullable)
+* number
+* equals : Paramerter include 'field'
+* email
+* url
+* regex  : Paramerter include 'pattern'
+* timestamp
+
 ### Use
 ``` Java
 package org.lyh.validator;
