@@ -1,5 +1,5 @@
 # validator
-Background check plug-in
+a java background check plug-in
 Flexible back office verification plugin
 
 ### Support
