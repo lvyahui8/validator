@@ -12,7 +12,7 @@ Flexible back office verification plugin
 * url
 * regex  : Paramerter include 'pattern'
 * timestamp
-
+* ....
 ### Use
 ``` Java
 package org.lyh.validator;
