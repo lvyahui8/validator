@@ -5,7 +5,6 @@ package org.lyh;
  */
 public class MainTest {
     public static void main(String[] args) {
-
         UserEntity userEntity = new UserEntity();
         userEntity.validate();
         System.out.println(userEntity.getErrors());
@@ -32,7 +31,6 @@ public class MainTest {
         userEntity.validate();
 
         System.out.println(userEntity.getErrors());
-
     }
 
 }
