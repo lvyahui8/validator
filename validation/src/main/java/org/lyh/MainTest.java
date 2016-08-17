@@ -1,4 +1,4 @@
-package org.lyh.validator;
+package org.lyh;
 
 /**
  * Created by lvyahui on 2015-06-28.

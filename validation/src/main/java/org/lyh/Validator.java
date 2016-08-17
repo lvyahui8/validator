@@ -1,4 +1,4 @@
-package org.lyh.validator;
+package org.lyh;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

@@ -1,7 +1,6 @@
-package org.lyh.validator;
+package org.lyh;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,31 +39,31 @@ public class BaseEntity {
     }
 
     /**
-     * ½øĞĞĞ£Ñé
-     * @return Ğ£Ñé
+     * ï¿½ï¿½ï¿½ï¿½Ğ£ï¿½ï¿½
+     * @return Ğ£ï¿½ï¿½
      */
     public boolean validate() {
         return this.validator.validate();
     }
 
     /**
-     * Èç¹ûĞ£ÑéÊ§°ÜÍ¨¹ıËû»ñÈ¡´íÎóĞÅÏ¢
-     * @return ´íÎóĞÅÏ¢
+     * ï¿½ï¿½ï¿½Ğ£ï¿½ï¿½Ê§ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
+     * @return ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
      */
     public Map<String,Map<String,String>> getErrors(){
         return this.validator.getErrors();
     }
 
     /**
-     * Ğ£Ñé¹æÔò
-     * @return Ğ£Ñé¹æÔò
+     * Ğ£ï¿½ï¿½ï¿½ï¿½ï¿½
+     * @return Ğ£ï¿½ï¿½ï¿½ï¿½ï¿½
      */
 
     public String[][] labels(){return null;}
 
     /**
-     * ×Ö¶Î·­Òë
-     * @return ×Ö¶Î·­Òë
+     * ï¿½Ö¶Î·ï¿½ï¿½ï¿½
+     * @return ï¿½Ö¶Î·ï¿½ï¿½ï¿½
      */
     public String [][] rules(){return null;}
 
