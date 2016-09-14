@@ -1,4 +1,4 @@
-package org.lyh.validator;
+package org.lyh.validate.example;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

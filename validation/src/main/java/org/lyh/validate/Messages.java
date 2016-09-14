@@ -1,4 +1,4 @@
-package org.lyh;
+package org.lyh.validate;
 
 import java.util.HashMap;
 import java.util.Map;
