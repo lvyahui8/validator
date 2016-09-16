@@ -1,6 +1,7 @@
 package org.lyh.validate;
 
 /**
+ *
  * Created by lvyahui on 2015-06-28.
  */
 public class MainTest {

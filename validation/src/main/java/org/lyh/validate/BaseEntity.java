@@ -1,5 +1,7 @@
 package org.lyh.validate;
 
+import org.lyh.validate.config.ValidationType;
+
 import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
@@ -8,9 +10,9 @@ import java.util.Map;
  *
  * Created by lvyahui on 2015-06-27.
  */
-public class BaseEntity {
+public abstract class BaseEntity {
 
-    private Validator validator = new Validator(this);
+    private Validator validator = new BeanValidator(this);
 
     protected Map<String,String> labelMap = new HashMap<String,String>();
 
@@ -51,7 +53,7 @@ public class BaseEntity {
      * 获取错误信息
      * @return 错误信息
      */
-    public Map<String,Map<String,String>> getErrors(){
+    public Map<String,Map<ValidationType,String>> getErrors(){
         return this.validator.getErrors();
     }
 
@@ -60,12 +62,12 @@ public class BaseEntity {
      * @return 翻译数组
      */
 
-    public String[][] labels(){return null;}
+    public abstract String[][] labels();
 
     /**
      * 验证规则
      * @return 验证规则数组
      */
-    public String [][] rules(){return null;}
+    public abstract String [][] rules();
 
 }
