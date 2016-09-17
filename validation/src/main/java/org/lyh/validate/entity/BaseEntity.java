@@ -1,5 +1,7 @@
-package org.lyh.validate;
+package org.lyh.validate.entity;
 
+import org.lyh.validate.BeanValidator;
+import org.lyh.validate.Validator;
 import org.lyh.validate.config.ValidationType;
 
 import java.lang.reflect.Field;

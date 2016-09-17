@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<validator>
+    <!--验证规则-->
+    <rules>
+        <field name="username">
+            <rule name="required"/>
+        </field>
+        <field name="password">
+            <rule name="required"/>
+            <rule name="length" min="6" max="14"/>
+        </field>
+        <field name="rePassword">
+            <rule name="equals" prop="password" message="两次密码不一致"/>
+        </field>
+        <field name="email">
+            <rule name="email"/>
+        </field>
+        <field name="phone">
+            <rule name="regex" pattern="^\d{11}$"/>
+        </field>
+    </rules>
+    <!-- 自定义消息 -->
+    <messages>
+        <message name="required" value="{0}必须填写" />
+    </messages>
+    <!--属性字段翻译-->
+    <attributes>
+        <attribute name="username" value="用户名"/>
+        <attribute name="password" value="密码"/>
+        <attribute name="email" value="邮箱"/>
+    </attributes>
+</validator>

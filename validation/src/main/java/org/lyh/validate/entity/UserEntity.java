@@ -1,4 +1,4 @@
-package org.lyh.validate;
+package org.lyh.validate.entity;
 
 import java.sql.Timestamp;
 

@@ -1,5 +1,7 @@
 package org.lyh.validate;
 
+import org.lyh.validate.entity.UserEntity;
+
 /**
  *
  * Created by lvyahui on 2015-06-28.
